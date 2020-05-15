@@ -4,7 +4,7 @@
 #
 Name     : R-pROC
 Version  : 1.16.2
-Release  : 6
+Release  : 7
 URL      : https://cran.r-project.org/src/contrib/pROC_1.16.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/pROC_1.16.2.tar.gz
 Summary  : Display and Analyze ROC Curves
@@ -34,21 +34,22 @@ lib components for the R-pROC package.
 
 %prep
 %setup -q -c -n pROC
+cd %{_builddir}/pROC
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1584718639
+export SOURCE_DATE_EPOCH=1589584514
 
 %install
-export SOURCE_DATE_EPOCH=1584718639
+export SOURCE_DATE_EPOCH=1589584514
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
