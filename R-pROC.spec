@@ -4,7 +4,7 @@
 #
 Name     : R-pROC
 Version  : 1.16.2
-Release  : 8
+Release  : 9
 URL      : https://cran.r-project.org/src/contrib/pROC_1.16.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/pROC_1.16.2.tar.gz
 Summary  : Display and Analyze ROC Curves
