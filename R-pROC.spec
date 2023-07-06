@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-pROC
-Version  : 1.18.2
-Release  : 31
-URL      : https://cran.r-project.org/src/contrib/pROC_1.18.2.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/pROC_1.18.2.tar.gz
+Version  : 1.18.4
+Release  : 32
+URL      : https://cran.r-project.org/src/contrib/pROC_1.18.4.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/pROC_1.18.4.tar.gz
 Summary  : Display and Analyze ROC Curves
 Group    : Development/Tools
 License  : GPL-3.0
@@ -22,6 +22,8 @@ BuildRequires : buildreq-R
 %define debug_package %{nil}
 
 %description
+[![R build status](https://github.com/xrobin/pROC/workflows/R-CMD-check/badge.svg)](https://github.com/xrobin/pROC/actions?workflow=R-CMD-check)
+[![R build status](https://github.com/xrobin/pROC/workflows/test-coverage/badge.svg)](https://github.com/xrobin/pROC/actions?workflow=test-coverage)
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/xrobin/pROC?branch=master&svg=true)](https://ci.appveyor.com/project/xrobin/pROC)
 [![Codecov coverage](https://codecov.io/github/xrobin/pROC/branch/master/graphs/badge.svg)](https://app.codecov.io/github/xrobin/pROC)
 [![CRAN Version](http://www.r-pkg.org/badges/version/pROC)](https://cran.r-project.org/package=pROC)
@@ -46,10 +48,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1684031264
+export SOURCE_DATE_EPOCH=1688663897
 
 %install
-export SOURCE_DATE_EPOCH=1684031264
+export SOURCE_DATE_EPOCH=1688663897
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -129,6 +131,10 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/pROC/tests/testthat/_snaps/ggroc/ggroc-list-multi-aes.svg
 /usr/lib64/R/library/pROC/tests/testthat/_snaps/ggroc/ggroc-list-scale-colour-manual.svg
 /usr/lib64/R/library/pROC/tests/testthat/_snaps/ggroc/ggroc-list-screenshot.svg
+/usr/lib64/R/library/pROC/tests/testthat/_snaps/ggroc/ggroc-screenshot-base.svg
+/usr/lib64/R/library/pROC/tests/testthat/_snaps/ggroc/ggroc-screenshot-legacy.svg
+/usr/lib64/R/library/pROC/tests/testthat/_snaps/ggroc/ggroc-screenshot-percent-legacy.svg
+/usr/lib64/R/library/pROC/tests/testthat/_snaps/ggroc/ggroc-screenshot-percent.svg
 /usr/lib64/R/library/pROC/tests/testthat/_snaps/ggroc/ggroc-screenshot.svg
 /usr/lib64/R/library/pROC/tests/testthat/_snaps/ggroc/ggroc-smooth-list-screenshot.svg
 /usr/lib64/R/library/pROC/tests/testthat/_snaps/ggroc/ggroc-smooth-screenshot.svg
@@ -148,6 +154,7 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/pROC/tests/testthat/helper-deLongPlacementsCpp-expected.R
 /usr/lib64/R/library/pROC/tests/testthat/helper-expect_equal_roc.R
 /usr/lib64/R/library/pROC/tests/testthat/helper-expectations.R
+/usr/lib64/R/library/pROC/tests/testthat/helper-no-progress.R
 /usr/lib64/R/library/pROC/tests/testthat/helper-roc-expected.R
 /usr/lib64/R/library/pROC/tests/testthat/helper-roc.utils-expected.R
 /usr/lib64/R/library/pROC/tests/testthat/helper-rocs.R
